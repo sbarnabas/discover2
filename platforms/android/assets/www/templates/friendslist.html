@@ -1,0 +1,18 @@
+<ion-header-bar class="bar-positive">
+        <button class="button" ng-click="pickContact()">Pick</button>
+        <h1 class="title">Pick Contacts</h1>
+        <button class="button" ng-click="goNext()">Done</button>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+
+            <a class="item item-thumbnail-left" ng-repeat="contact in selectedContacts" on-swipe-left="dismiss(contact)" on-swipe-right="dismiss(contact)">
+                <img ng-src="{{contact.photos[0].value}}" ng-if="contact.photos.length > 0">
+                <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Silver_-_replace_this_image_male.svg/200px-Silver_-_replace_this_image_male.svg.png" ng-if="contact.photos.length === 0">
+                <h2>{{contact.displayName}}</h2>
+                <p ng-if="contact.emails.length > 0">{{contact.emails[0].type}} : {{contact.emails[0].value}}</p>
+                <p ng-if="contact.phones.length > 0">{{contact.phones[0].type}} : {{contact.phones[0].value}}</p>
+            </a>
+
+        </div>
+    </ion-content>

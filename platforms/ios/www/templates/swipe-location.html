@@ -1,0 +1,32 @@
+
+<ion-content>
+<div class="card" style="border:1px">
+<div class="item">
+ <td-cards noscroll>
+              <td-card id="td-card" ng-repeat="card in cards" on-destroy="cardDestroyed($index)"
+              on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)"
+              on-partial-swipe="cardPartialSwipe(amt)">
+                  <div class="title">
+                      {{card.title}}
+                  </div>
+                  <div class="image">
+                      <div class="no-text overlayBox"><div class="noBox boxed">Trash</div></div>
+                      <img ng-src="{{card.image}}">
+                      <div class="yes-text overlayBox"><div class="yesBox boxed" id="centerMe">Save</div></div>
+                  </div>
+              </td-card>
+          </td-cards>
+</div>
+  </div>
+<div class="card" style="border:1px">
+<div class="item">
+
+</div>
+  </div>
+  <div class="card" style="border:1px">
+  <div class="item item-input">
+   <a class="button button-balanced"  ng-click="doneSwiping()" style="width:95%;margin:0 auto">
+    Done</a>
+    </div>
+</div>
+</ion-content>

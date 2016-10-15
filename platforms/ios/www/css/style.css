@@ -1,0 +1,40 @@
+/* Empty. Add your own CSS if you like */
+.main-page {
+    background:  transparent url(nyc.jpg) no-repeat top left;
+    background-size: cover;
+    width: 100%; 
+    height: 100%;
+    position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+    -khtml-opacity:.50; 
+ -moz-opacity:.50; 
+ -ms-filter:"alpha(opacity=50)";
+  filter:alpha(opacity=50);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
+  opacity:.50; 
+}
+.listspace {
+	text-align:center;
+
+}
+
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 400px;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+  margin-left: -1px;
+  padding-left: 14px;  /* Regular padding-left + 1. */
+  width: 401px;
+}
+
+.pac-container {
+  font-family: Roboto;
+}

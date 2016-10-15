@@ -1,0 +1,29 @@
+<ion-header-bar class="bar-positive">
+<h1 class="title">Pick Locations</h1>
+<button class="button" ng-click="startWorkflow()">Done</button>
+</ion-header-bar>
+<ion-content>
+<div class="list">
+	<a class="item item-button-right" ng-repeat="location in savedLocations">
+		
+			{{location.title}}
+			<div class ="buttons">
+				   
+     			<div class="ion-item" style=" " ng-repeat="contact in location.contacts">
+					<img  class="small-avatar" ng-src="{{contact.photos[0].value}}" ng-if="contact.photos.length > 0">
+					<img class="small-avatar" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Silver_-_replace_this_image_male.svg/200px-Silver_-_replace_this_image_male.svg.png" ng-if="contact.photos.length === 0">
+				</div>
+			
+    		
+
+		</div>
+	</a>
+<div class="card">
+	<div class="item item-input">
+		<a class="button button-positive"  ng-click="" style="width:95%;margin:0 auto">
+		Enjoy!</a>
+	</div>
+</div>
+
+</div>
+</ion-content>

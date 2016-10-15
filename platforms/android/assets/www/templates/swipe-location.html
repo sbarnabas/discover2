@@ -1,0 +1,36 @@
+<ion-content>
+
+<td-cards no-scroll>
+
+	<td-card class="td-card" ng-repeat="card in cards" on-destroy="cardDestroyed($index)"
+		on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)"
+		on-partial-swipe="cardPartialSwipe(amt)">
+		<div class="image">
+			<div class="no-text overlayBox"><div class="noBox boxed">Trash</div></div>
+			<img ng-src="{{card.image}}">
+			<div class="yes-text overlayBox"><div class="yesBox boxed" id="centerMe">Save</div></div>
+		</div>
+		<div class="title">
+			{{card.title}}
+		</div>
+		<div class="info">
+		<i class="icon-right ion-trash-b" style="color:red" ng-click="cardSwipedLeft($index);cardDestroyed($index)"></i>
+		<a class="icon ion-ios-information-outline" style="color:blue;position:absolute;left:50%"></a>
+		<i class="icon-right ion-heart" style="color:green;position:absolute;left:95%"ng-click="cardSwipedRight($index);cardDestroyed($index)"></i>
+
+		</div>
+	</td-card>
+</td-cards>
+
+<div class="card">
+	<div class="item item-input">
+		<a class="button button-balanced"  ng-click="doneSwiping()" style="width:95%;margin:0 auto">
+		Done</a>
+	</div>
+</div>
+<div class="bottom-info">
+<span>Trashed: {{trashed}}</span>
+<span style="left:250px;position:absolute">Loved: {{loved}}</span>
+</div>
+
+</ion-content>

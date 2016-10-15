@@ -1,0 +1,46 @@
+<div data-role="page" id="Main" class="main-page">
+</div>
+<ion-header-bar align-title="center" class="bar bar-header bar-positive">
+<h1 class="title">I want to...</h1>
+</ion-header-bar>
+<ion-content>
+<div class="card" style="border:1px">
+  <div class="list">
+    <label class="item item-input item-floating-label">
+      <span class="input-label">Go To...</span>
+      <input type="text" id="location" placeholder="Go To..." googleplace="" ng-model="where" >
+    </label>
+  </div>  </div>
+  <div class="card" style="border:1px">
+    <ion-radio ng-model="$parent.$parent.who" value="me" class='listspace' name="who">...By Myself</ion-radio>
+    <ion-radio ng-model="$parent.$parent.who" value="friends" class='listspace' name="who">...With My Friends</ion-radio>
+  </div>
+  <div class="card" style="border:1px">
+    <ion-toggle ng-model="$parent.$parent.go" class='listspace item-icon-left' >
+    <i class="icon ion-android-plane"></i>
+    Need a Way to Get There</ion-toggle>
+    <ion-toggle ng-model="$parent.$parent.stay" class='listspace item-icon-left' >
+    <i class="icon ion-android-home"></i>Need a Place to Stay</ion-toggle>
+    <ion-toggle ng-model="$parent.$parent.do"  class='listspace item-icon-left'>
+    <i class="icon ion-android-bar"></i>Need Things to Do</ion-toggle>
+  </div>
+  
+  <div class="card" style="border:1px">
+    <div class="list">
+      <label class="item item-input item-label">
+        <span class="input-label">On...</span>
+        <input type="date" id="location" placeholder="On..." googleplace="" ng-model="when" >
+      </label>
+      <label class="item item-input item-label">
+        <span class="input-label">Day(s)</span>
+        <input type="number" ng-model="duration" placeholder="0" value="0" min="0" max="14" step="1">
+      </label>
+    </div>
+  </div>
+  <div class="card" style="border:1px">
+    <div class="item item-input">
+      <a class="button button-positive" ng-disabled="$parent.what==null||$parent.who==null" ng-click="startWorkflow()" style="width:95%;margin:0 auto">
+      Discover!</a>
+    </div>
+  </div>
+  </ion-content>
